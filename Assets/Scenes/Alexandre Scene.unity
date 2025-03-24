@@ -244,21 +244,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a6f8664c209d8442b13e3d0c9c3e8d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tejadoPrefab: {fileID: 4648247347135940585, guid: 2f7f3df47ad25a144b8e9b3574cf5170, type: 3}
-  plantaPrefab: {fileID: 4648247347135940585, guid: 62b46d80b19a2ce4e8e2bbb74aa4397e, type: 3}
-  offsetVertical: -4
-  retardoEntreTorre: 4
-  distanciaXDesdeCentro: 6
-  minPlantas: 1
-  maxPlantas: 5
-  alturaPlanta: 1.5
-  escalaXPorPlanta:
-  - 1
-  - 2
-  - 3
-  - 4
-  - 5
-  velocidadMovimiento: 2
+  casasPrefabs:
+  - {fileID: 4648247347135940585, guid: 2f7f3df47ad25a144b8e9b3574cf5170, type: 3}
+  - {fileID: 4648247347135940585, guid: 62b46d80b19a2ce4e8e2bbb74aa4397e, type: 3}
+  - {fileID: 4648247347135940585, guid: 380144257a98ead418e89b0c9ace89c7, type: 3}
+  - {fileID: 4648247347135940585, guid: 19d42864cac7681438eeedfd49cf037d, type: 3}
+  retardoEntreTorres: 2
+  distanciaX: 6
+  offsetY: 0
+  velocidadMovimiento: 3
+  alturaPlanta: 0
 --- !u!4 &1692188867
 Transform:
   m_ObjectHideFlags: 0

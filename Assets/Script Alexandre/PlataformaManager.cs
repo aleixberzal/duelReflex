@@ -1,26 +1,18 @@
 using UnityEngine;
 
-public class PlataformaSpawner : MonoBehaviour
+public class PlataformaManager : MonoBehaviour
 {
-    [Header("Prefabs")]
-    public GameObject tejadoPrefab;
-    public GameObject plantaPrefab;
-  
-    [Header("Altura base")]
-    public float offsetVertical = -2f;
+    [Header("Prefabs de casas completas (1 a 4 plantas)")]
+    public GameObject[] casasPrefabs; // Índice 0 = 1 planta, índice 3 = 4 plantas
 
     [Header("Spawning")]
-    public float retardoEntreTorre = 2f;
-    public float distanciaXDesdeCentro = 6f;
-    public int minPlantas = 1;
-    public int maxPlantas = 5;
-    public float alturaPlanta = 1.5f;
-
-    [Header("Escalas por planta (de arriba a abajo)")]
-    public float[] escalaXPorPlanta = { 1.0f, 1.1f, 1.2f, 1.3f, 1.4f };
+    public float retardoEntreTorres = 2f;
+    public float distanciaX = 6f;
+    public float offsetY = -2f;
 
     [Header("Movimiento")]
     public float velocidadMovimiento = 2f;
+    public float alturaPlanta = 1.5f;
 
     private float temporizador = 0f;
     private int indiceTorre = 0;
@@ -31,63 +23,44 @@ public class PlataformaSpawner : MonoBehaviour
 
         if (temporizador <= 0f)
         {
-            ConstruirParDeTorres();
-            temporizador = retardoEntreTorre;
+            GenerarParDeTorres();
+            temporizador = retardoEntreTorres;
         }
     }
 
-    void ConstruirParDeTorres()
+    void GenerarParDeTorres()
     {
-        int numPlantas = Random.Range(minPlantas, maxPlantas + 1);
-        float offsetX = indiceTorre * distanciaXDesdeCentro + 2f;
+        // Elegir prefab aleatorio
+        int index = Random.Range(0, casasPrefabs.Length);
+        GameObject prefabSeleccionado = casasPrefabs[index];
+
+        // Calcular número de plantas y su altura en Y
+        int numPlantas = index + 1;
+        float alturaTotal = numPlantas * alturaPlanta;
+        float yBase = offsetY + (alturaTotal / 2f);
+
+        float xOffset = indiceTorre * distanciaX + 2f;
 
         // Torre derecha
-        ConstruirTorre(Vector3.zero, 1f, offsetX, numPlantas);
+        Instanciar(prefabSeleccionado, new Vector3(0f, yBase, 0f), 1f);
 
         // Torre izquierda
-        ConstruirTorre(Vector3.zero, -1f, -offsetX, numPlantas);
+        Instanciar(prefabSeleccionado, new Vector3(0f, yBase, 0f), -1f);
 
         indiceTorre++;
     }
 
-    void ConstruirTorre(Vector3 origen, float direccion, float posicionFinalX, int numPlantas)
+    void Instanciar(GameObject prefab, Vector3 posicion, float direccion)
     {
-        GameObject torre = new GameObject("Torre");
-        torre.transform.position = origen;
-        torre.transform.localScale = Vector3.one;
+        GameObject torre = Instantiate(prefab, posicion, Quaternion.identity);
 
-        MovimientoPlataforma mover = torre.AddComponent<MovimientoPlataforma>();
+        MovimientoPlataforma mover = torre.GetComponent<MovimientoPlataforma>();
+        if (mover == null)
+        {
+            mover = torre.AddComponent<MovimientoPlataforma>();
+        }
+
         mover.direccionX = direccion;
         mover.velocidad = velocidadMovimiento;
-
-        // Offset vertical global para bajar toda la torre
-        float alturaInicialY = offsetVertical + numPlantas * alturaPlanta;
-
-        // Tejado en lo alto
-        Vector3 posTejado = new Vector3(origen.x, alturaInicialY, 0);
-        Instantiate(tejadoPrefab, posTejado, Quaternion.identity, torre.transform);
-
-        // Construcción de plantas desde arriba hacia abajo
-        for (int i = 0; i < numPlantas; i++)
-        {
-            float y = alturaInicialY - ((i + 1) * alturaPlanta);
-            Vector3 posPlanta = new Vector3(origen.x, y, 0);
-            GameObject planta = Instantiate(plantaPrefab, posPlanta, Quaternion.identity, torre.transform);
-
-            // Escalado según piso
-            float escalaX = 1f;
-            if (i < escalaXPorPlanta.Length)
-            {
-                escalaX = escalaXPorPlanta[i];
-            }
-
-            Vector3 escalaOriginal = planta.transform.localScale;
-            planta.transform.localScale = new Vector3(
-                escalaOriginal.x * escalaX,
-                escalaOriginal.y,
-                escalaOriginal.z
-            );
-        }
     }
-
 }
