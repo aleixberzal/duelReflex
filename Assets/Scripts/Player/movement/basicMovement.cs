@@ -7,7 +7,7 @@ public class basicMovement : MonoBehaviour
 {
     private Rigidbody2D rb2D;
     public GameObject render;
-
+    public string teclas = "Horizontal";
     [Header("Movimiento")]
 
     private float horizontalMovement = 0f;
@@ -30,7 +30,7 @@ public class basicMovement : MonoBehaviour
     private void Update()
     {
         /*It gets the player's input (1 to go right, -1 to go left)*/
-        horizontalMovement = Input.GetAxisRaw("Horizontal");
+        horizontalMovement = Input.GetAxisRaw(teclas);
     }
 
     private void FixedUpdate()
