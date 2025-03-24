@@ -489,9 +489,10 @@ GameObject:
   - component: {fileID: 1310187823}
   - component: {fileID: 1310187827}
   - component: {fileID: 1310187828}
+  - component: {fileID: 1310187829}
   m_Layer: 0
   m_Name: Capsule
-  m_TagString: Untagged
+  m_TagString: Ninja1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -668,3 +669,17 @@ MonoBehaviour:
   isJumping: 0
   grounded: 0
   jumpReduction: 4
+--- !u!114 &1310187829
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1310187822}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 418f057b19f0be04f851f10e83b2b20b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bombaScript: {fileID: -8883639268197703187, guid: 7371ab4daf2b31041b48af8b776c3649, type: 3}
+  throwKey: 107

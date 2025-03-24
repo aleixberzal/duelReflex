@@ -4,17 +4,13 @@
 TagManager:
   serializedVersion: 2
   tags:
-<<<<<<< HEAD
   - ground
-=======
-  - Plataforma
-  - Spikes
->>>>>>> cdc9cb64b3174a76cb9b0c4f81d06e8ecac08a02
+  - Ninja1
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - Plataforma
+  - 
   - Water
   - UI
   - 
