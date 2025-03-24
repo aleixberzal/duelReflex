@@ -6,6 +6,9 @@ TagManager:
   tags:
   - ground
   - Ninja1
+  - Opponent
+  - Player1
+  - Player2
   layers:
   - Default
   - TransparentFX
@@ -13,8 +16,8 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
+  - Player1
+  - Player2
   - 
   - 
   - 

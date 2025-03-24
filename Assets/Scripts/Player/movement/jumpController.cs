@@ -35,7 +35,7 @@ public class JumpController : MonoBehaviour
     {
         movement = GetComponent<basicMovement>(); 
         rb2D = GetComponent<Rigidbody2D>();
-        originalSpeed = movement.movementSpeed;
+        originalSpeed = movement.movementSpeed; 
     }
 
     private void Update()
