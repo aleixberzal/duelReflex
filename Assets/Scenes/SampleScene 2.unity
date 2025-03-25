@@ -720,7 +720,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 281053383}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 4.6, y: -0.69, z: -0.018357141}
+  m_LocalPosition: {x: 3.24, y: -0.03, z: -0.018357141}
   m_LocalScale: {x: 2.6315792, y: 2.6315792, z: 2.6315792}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1823,6 +1823,7 @@ MonoBehaviour:
   velocidadKunai: 10
   cooldown: 1
   teclaDisparo: 102
+  retardoDisparo: 0.5
 --- !u!95 &633940303
 Animator:
   serializedVersion: 5
@@ -3199,6 +3200,7 @@ MonoBehaviour:
   velocidadKunai: 10
   cooldown: 1
   teclaDisparo: 258
+  retardoDisparo: 0.2
 --- !u!1001 &1934678198
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3345,7 +3347,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2103882963}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7a6f8664c209d8442b13e3d0c9c3e8d0, type: 3}
   m_Name: 

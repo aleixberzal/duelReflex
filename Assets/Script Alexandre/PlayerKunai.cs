@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class PlayerKunai : MonoBehaviour
@@ -11,6 +12,10 @@ public class PlayerKunai : MonoBehaviour
     private Animator Animator;
     private float tiempoUltimoDisparo = -Mathf.Infinity;
     private bool mirandoDerecha = true;
+    [Header("Retardo de disparo")]
+    public float retardoDisparo = 0.2f;
+
+    private float direccionActual = 1f;
 
     private void Start()
     {
@@ -30,22 +35,28 @@ public class PlayerKunai : MonoBehaviour
 
     void LanzarKunai()
     {
-        if(Animator != null)
+        if (Animator != null)
         {
             Animator.SetTrigger("Kunai");
         }
+
+        direccionActual = mirandoDerecha ? 1f : -1f;
+
+        Invoke(nameof(DispararKunai), retardoDisparo);
+    }
+    void DispararKunai()
+    {
         GameObject kunai = Instantiate(kunaiPrefab, puntoDisparo.position, Quaternion.identity);
 
         Rigidbody2D rb = kunai.GetComponent<Rigidbody2D>();
         if (rb != null)
         {
-            float direccion = mirandoDerecha ? 1f : -1f;
-            rb.velocity = new Vector2(direccion * velocidadKunai, 0f);
+            rb.velocity = new Vector2(direccionActual * velocidadKunai, 0f);
 
-            // Voltear kunai si mira a la izquierda
             Vector3 escala = kunai.transform.localScale;
-            escala.x *= direccion > 0 ? 1 : -1;
+            escala.x *= direccionActual > 0 ? 1 : -1;
             kunai.transform.localScale = escala;
         }
     }
+
 }
