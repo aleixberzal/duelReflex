@@ -6,7 +6,7 @@ public class MovimientoPlataforma : MonoBehaviour
     public float direccionX = 1f;
     public float limiteDesaparicion = 30f;
 
-    [Header("Fade")]
+    [Header("Fade visual")]
     public float fadeInicio = 0f;
     public float fadeFin = 3f;
 
@@ -15,7 +15,7 @@ public class MovimientoPlataforma : MonoBehaviour
     void Start()
     {
         sprites = GetComponentsInChildren<SpriteRenderer>();
-        SetAlpha(0f); // Comienza invisible
+        SetAlpha(0f);
     }
 
     void Update()
