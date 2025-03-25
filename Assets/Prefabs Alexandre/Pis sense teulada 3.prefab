@@ -96,7 +96,7 @@ GameObject:
   - component: {fileID: 9055936632390107845}
   m_Layer: 0
   m_Name: Pis sense teulada 3
-  m_TagString: Untagged
+  m_TagString: ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -186,7 +186,7 @@ GameObject:
   - component: {fileID: 9142887825684221210}
   m_Layer: 0
   m_Name: GameObject (2)
-  m_TagString: Untagged
+  m_TagString: ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -250,20 +250,24 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 0.65748835, y: 0.124744356}
-      - {x: 0.73697793, y: 0.22671865}
-      - {x: 0.6386203, y: 0.7369641}
-      - {x: 0, y: 1}
-      - {x: -0.08057543, y: 0.9414584}
+    - - {x: 0.5034241, y: -0.8872029}
+      - {x: 0.5524147, y: -0.46098945}
+      - {x: 0.60432804, y: -0.18718566}
+      - {x: 0.6506253, y: 0.12227241}
+      - {x: 0.75721, y: 0.075975}
+      - {x: 0.73434865, y: 0.4766931}
+      - {x: 0.68803936, y: 0.60149086}
+      - {x: 0.5933229, y: 0.85918313}
+      - {x: 0.42236492, y: 0.9241387}
+      - {x: -0.09060796, y: 1.003485}
       - {x: -0.5091907, y: 1.067117}
       - {x: -0.5738422, y: 0.93526095}
-      - {x: -0.6872568, y: 0.67753947}
-      - {x: -0.70512867, y: 0.46005127}
-      - {x: -0.7033439, y: 0.44093868}
-      - {x: -0.6117674, y: 0.41285223}
+      - {x: -0.6932862, y: 0.7411964}
+      - {x: -0.71559894, y: 0.3984043}
+      - {x: -0.6216499, y: 0.3340338}
+      - {x: -0.55406207, y: -0.013879534}
       - {x: -0.4631311, y: -0.7019792}
-      - {x: -0.45673338, y: -0.7322484}
-      - {x: 0.4946518, y: -0.89223963}
+      - {x: -0.45723772, y: -0.79480064}
   m_UseDelaunayMesh: 0
 --- !u!251 &7882941200009668322
 PlatformEffector2D:
@@ -277,7 +281,7 @@ PlatformEffector2D:
   m_ColliderMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_RotationalOffset: 0
+  m_RotationalOffset: 180
   m_UseOneWay: 1
   m_UseOneWayGrouping: 0
   m_SurfaceArc: 180
@@ -463,9 +467,25 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4477259070411326730, guid: 2f7f3df47ad25a144b8e9b3574cf5170, type: 3}
+      propertyPath: m_SurfaceArc
+      value: 242.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4477259070411326730, guid: 2f7f3df47ad25a144b8e9b3574cf5170, type: 3}
+      propertyPath: m_RotationalOffset
+      value: 179.7
+      objectReference: {fileID: 0}
     - target: {fileID: 4648247347135940585, guid: 2f7f3df47ad25a144b8e9b3574cf5170, type: 3}
       propertyPath: m_Name
       value: Tejado
+      objectReference: {fileID: 0}
+    - target: {fileID: 4648247347135940585, guid: 2f7f3df47ad25a144b8e9b3574cf5170, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 7570985043587712438, guid: 2f7f3df47ad25a144b8e9b3574cf5170, type: 3}
+      propertyPath: m_TagString
+      value: ground
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

@@ -9,6 +9,9 @@ public class PlataformaManager : MonoBehaviour
     public float retardoEntreTorres = 2f;
     public float distanciaX = 6f;
     public float offsetY = -2f;
+  
+    [Header("Escala de casas")]
+    public Vector3 escalaCasa = Vector3.one;
 
     [Header("Movimiento")]
     public float velocidadMovimiento = 2f;
@@ -54,6 +57,9 @@ public class PlataformaManager : MonoBehaviour
     {
         GameObject torre = Instantiate(prefab, posicion, Quaternion.identity);
 
+        // Aplicar escala desde el spawner
+        torre.transform.localScale = escalaCasa;
+
         MovimientoPlataforma mover = torre.GetComponent<MovimientoPlataforma>();
         if (mover == null)
         {
@@ -63,4 +69,5 @@ public class PlataformaManager : MonoBehaviour
         mover.direccionX = direccion;
         mover.velocidad = velocidadMovimiento;
     }
+
 }
