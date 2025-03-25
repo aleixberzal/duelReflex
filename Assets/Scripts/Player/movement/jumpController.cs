@@ -13,6 +13,7 @@ public class JumpController : MonoBehaviour
     private basicMovement movement;
     public float jumpReduction = 3f;
     private float originalSpeed;
+    public string jumpTecla = "space";
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -48,7 +49,7 @@ public class JumpController : MonoBehaviour
 
     private void Saltar()
     {
-        if (Input.GetKeyDown(KeyCode.Space)) 
+        if (Input.GetKeyDown(jumpTecla)) 
         {
             if (grounded)
             {
