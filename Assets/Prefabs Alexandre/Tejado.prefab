@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2632292125834784468}
   m_Layer: 0
   m_Name: Tejado
-  m_TagString: Untagged
+  m_TagString: ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -95,9 +95,11 @@ GameObject:
   m_Component:
   - component: {fileID: 8874459806145066174}
   - component: {fileID: 6620483199630490203}
+  - component: {fileID: 4477259070411326730}
+  - component: {fileID: 7562356037637079422}
   m_Layer: 0
   m_Name: GameObject (3)
-  m_TagString: Untagged
+  m_TagString: ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -147,7 +149,7 @@ PolygonCollider2D:
     serializedVersion: 2
     m_Bits: 4294967295
   m_IsTrigger: 0
-  m_UsedByEffector: 0
+  m_UsedByEffector: 1
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
@@ -161,23 +163,70 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 0.51247454, y: 0.3679348}
-      - {x: 0.6155812, y: 0.59501153}
+    - - {x: 0.5166631, y: 0.33940437}
+      - {x: 0.56822026, y: 0.5199807}
+      - {x: 0.63961595, y: 0.49889332}
+      - {x: 0.61620873, y: 0.65537906}
+      - {x: 0.5865229, y: 0.7632291}
       - {x: 0.50114644, y: 0.9235685}
+      - {x: 0.25315434, y: 0.98227775}
       - {x: 0, y: 1}
-      - {x: -0.08057543, y: 0.9414584}
+      - {x: -0.08496764, y: 1.0004609}
+      - {x: -0.37033218, y: 1.0217123}
       - {x: -0.48576644, y: 0.95415914}
-      - {x: -0.51338375, y: 0.8998861}
-      - {x: -0.58550113, y: 0.688829}
-      - {x: -0.51377857, y: 0.5785653}
-      - {x: -0.4426924, y: 0.3842666}
-      - {x: -0.3268408, y: -0.062310636}
-      - {x: -0.054061323, y: -1.4405112}
-      - {x: -0.01580083, y: -2.463297}
-      - {x: -0.016042605, y: -4.2695355}
-      - {x: 0.0078973975, y: -4.6386247}
-      - {x: 0.030380456, y: -4.3873196}
-      - {x: 0.037628457, y: -2.5277247}
-      - {x: 0.089483365, y: -1.3785313}
-      - {x: 0.42678133, y: 0.11697286}
+      - {x: -0.51334363, y: 0.93970305}
+      - {x: -0.53386295, y: 0.89864755}
+      - {x: -0.6103826, y: 0.6421459}
+      - {x: -0.5147345, y: 0.55992275}
+      - {x: -0.4458158, y: 0.30728254}
+      - {x: -0.33582082, y: -0.1387054}
+      - {x: -0.06332618, y: -1.3627322}
+      - {x: 0.09665887, y: -1.3777403}
+      - {x: 0.4370416, y: 0.06909082}
   m_UseDelaunayMesh: 0
+--- !u!251 &4477259070411326730
+PlatformEffector2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7570985043587712438}
+  m_Enabled: 1
+  m_UseColliderMask: 1
+  m_ColliderMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RotationalOffset: 179.86
+  m_UseOneWay: 1
+  m_UseOneWayGrouping: 0
+  m_SurfaceArc: 239.84
+  m_UseSideFriction: 0
+  m_UseSideBounce: 0
+  m_SideArc: 1
+--- !u!50 &7562356037637079422
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7570985043587712438}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
