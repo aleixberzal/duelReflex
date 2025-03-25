@@ -43,7 +43,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -134,7 +134,784 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Ninja negre Run_0
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 1336
+        width: 217
+        height: 312
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 467122972e36f844b868512188388160
+      internalID: -948211591
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ninja negre Run_1
+      rect:
+        serializedVersion: 2
+        x: 355
+        y: 1336
+        width: 207
+        height: 312
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b8158e4c31fa2d429083467211ace39
+      internalID: 74208220
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ninja negre Run_2
+      rect:
+        serializedVersion: 2
+        x: 619
+        y: 1334
+        width: 196
+        height: 314
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 123a5b3acb732f747903cbaa7af2a863
+      internalID: -1631471515
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ninja negre Run_3
+      rect:
+        serializedVersion: 2
+        x: 874
+        y: 1334
+        width: 183
+        height: 314
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb706c1a5c688864c8df85d69205a3a4
+      internalID: -387183005
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ninja negre Run_4
+      rect:
+        serializedVersion: 2
+        x: 1118
+        y: 1334
+        width: 172
+        height: 314
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d00a55f696eee84289483e14e95b399
+      internalID: 288019917
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ninja negre Run_5
+      rect:
+        serializedVersion: 2
+        x: 1354
+        y: 1336
+        width: 161
+        height: 312
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3aec468b4fc6cb643b9a543b9514741c
+      internalID: 824118029
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ninja negre Run_6
+      rect:
+        serializedVersion: 2
+        x: 1580
+        y: 1335
+        width: 147
+        height: 313
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee8fef8f5399d7b4dbe909edaae1110e
+      internalID: -963140328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ninja negre Run_7
+      rect:
+        serializedVersion: 2
+        x: 1786
+        y: 1335
+        width: 138
+        height: 313
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46005806dd491f348862d5ab569f74c1
+      internalID: 942142460
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ninja negre Run_8
+      rect:
+        serializedVersion: 2
+        x: 1969
+        y: 1335
+        width: 138
+        height: 313
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a6d45db9012c9c468877ac76734646d
+      internalID: -882492708
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ninja negre Run_9
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 926
+        width: 138
+        height: 313
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ee8bad90f9e0d6479f531a6e0d00e17
+      internalID: 2128397208
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ninja negre Run_10
+      rect:
+        serializedVersion: 2
+        x: 311
+        y: 926
+        width: 138
+        height: 313
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee051b74f6396cb48884e269480a5f37
+      internalID: 1883795021
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ninja negre Run_11
+      rect:
+        serializedVersion: 2
+        x: 485
+        y: 926
+        width: 138
+        height: 313
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a94ac0161785ee4c8d812f4069ce91a
+      internalID: 509648612
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ninja negre Run_12
+      rect:
+        serializedVersion: 2
+        x: 667
+        y: 927
+        width: 139
+        height: 312
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ece70ab0628ca1342ade49505ff48374
+      internalID: 783881215
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ninja negre Run_13
+      rect:
+        serializedVersion: 2
+        x: 864
+        y: 926
+        width: 146
+        height: 313
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44173954d2ba63e4c9071240fb4e83aa
+      internalID: 1141420282
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ninja negre Run_14
+      rect:
+        serializedVersion: 2
+        x: 1064
+        y: 925
+        width: 159
+        height: 314
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf19400f82850fe48bd1caf0e022805b
+      internalID: 174630777
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ninja negre Run_15
+      rect:
+        serializedVersion: 2
+        x: 1264
+        y: 926
+        width: 181
+        height: 313
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5d53b6c0112f2d46a8558cdca341a47
+      internalID: -557456965
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ninja negre Run_16
+      rect:
+        serializedVersion: 2
+        x: 1485
+        y: 925
+        width: 191
+        height: 314
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8b874f3c9b2e8143bd92fdbcf786f11
+      internalID: 529762568
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ninja negre Run_17
+      rect:
+        serializedVersion: 2
+        x: 1716
+        y: 924
+        width: 207
+        height: 315
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 020964283495fa341a38dd082a8ecdd5
+      internalID: 1736657100
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ninja negre Run_18
+      rect:
+        serializedVersion: 2
+        x: 1962
+        y: 926
+        width: 218
+        height: 317
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc04e5ad281dec04489d81a1f77aa47b
+      internalID: 2085471734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ninja negre Run_19
+      rect:
+        serializedVersion: 2
+        x: 121
+        y: 519
+        width: 206
+        height: 314
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14ee31c4ac6874c42b21d13c63509473
+      internalID: 333288419
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ninja negre Run_20
+      rect:
+        serializedVersion: 2
+        x: 399
+        y: 521
+        width: 192
+        height: 313
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c3552dbfa176ad4f83c745a95c0e590
+      internalID: 774772136
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ninja negre Run_21
+      rect:
+        serializedVersion: 2
+        x: 684
+        y: 521
+        width: 180
+        height: 312
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a45c9bba59d85840a4fbe059e5c5796
+      internalID: 1516088250
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ninja negre Run_22
+      rect:
+        serializedVersion: 2
+        x: 938
+        y: 520
+        width: 160
+        height: 314
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6309a90848ca334d9624ee8b315c203
+      internalID: -374799452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ninja negre Run_23
+      rect:
+        serializedVersion: 2
+        x: 1163
+        y: 522
+        width: 146
+        height: 311
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff448415d3e36dc40b7bb4d2dd3df183
+      internalID: -2115312301
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ninja negre Run_24
+      rect:
+        serializedVersion: 2
+        x: 1373
+        y: 522
+        width: 140
+        height: 311
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38f566eecdf04fc4fbfd7cdd6d1972f6
+      internalID: -2084385194
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ninja negre Run_25
+      rect:
+        serializedVersion: 2
+        x: 1561
+        y: 521
+        width: 138
+        height: 312
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20000d19e22c7064c8ad211b2d289cf7
+      internalID: 1227611098
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ninja negre Run_26
+      rect:
+        serializedVersion: 2
+        x: 1776
+        y: 521
+        width: 138
+        height: 312
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e03e5207ec9575c4684497ea2c06fb3b
+      internalID: 1736640708
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ninja negre Run_27
+      rect:
+        serializedVersion: 2
+        x: 1982
+        y: 521
+        width: 139
+        height: 312
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6349918578537c043bfaa5054b99495d
+      internalID: -37175958
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ninja negre Run_28
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 71
+        width: 138
+        height: 313
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c6015d47ad72a248941a64668466a1d
+      internalID: 2031406924
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ninja negre Run_29
+      rect:
+        serializedVersion: 2
+        x: 265
+        y: 71
+        width: 138
+        height: 313
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1636c7d634557242a4c30d376cab535
+      internalID: 677702858
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ninja negre Run_30
+      rect:
+        serializedVersion: 2
+        x: 473
+        y: 71
+        width: 147
+        height: 313
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78e611db06855f843b1e3fe63731b3fb
+      internalID: 1545653295
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ninja negre Run_31
+      rect:
+        serializedVersion: 2
+        x: 692
+        y: 72
+        width: 161
+        height: 312
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2fe1f18b987f8334387888f76b7395a3
+      internalID: 717331234
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ninja negre Run_32
+      rect:
+        serializedVersion: 2
+        x: 938
+        y: 71
+        width: 172
+        height: 313
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eaeb9466ade8dc54db32a2267ac9c6e3
+      internalID: -983791734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ninja negre Run_33
+      rect:
+        serializedVersion: 2
+        x: 1183
+        y: 70
+        width: 183
+        height: 314
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c4f04b161ec2aa4889a033afd82ce54
+      internalID: -1805404779
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ninja negre Run_34
+      rect:
+        serializedVersion: 2
+        x: 1467
+        y: 71
+        width: 197
+        height: 313
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 209cf7988ca23ee468513ded86b15e0b
+      internalID: -1333088940
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ninja negre Run_35
+      rect:
+        serializedVersion: 2
+        x: 1745
+        y: 71
+        width: 207
+        height: 313
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7889f695a6167304e8e3cd01a6a8f95c
+      internalID: 967700797
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ninja negre Run_36
+      rect:
+        serializedVersion: 2
+        x: 1989
+        y: 71
+        width: 216
+        height: 313
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1585ded1b5b760a47a5e857408526ad3
+      internalID: 1120667541
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -145,7 +922,44 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Ninja negre Run_0: -948211591
+      Ninja negre Run_1: 74208220
+      Ninja negre Run_10: 1883795021
+      Ninja negre Run_11: 509648612
+      Ninja negre Run_12: 783881215
+      Ninja negre Run_13: 1141420282
+      Ninja negre Run_14: 174630777
+      Ninja negre Run_15: -557456965
+      Ninja negre Run_16: 529762568
+      Ninja negre Run_17: 1736657100
+      Ninja negre Run_18: 2085471734
+      Ninja negre Run_19: 333288419
+      Ninja negre Run_2: -1631471515
+      Ninja negre Run_20: 774772136
+      Ninja negre Run_21: 1516088250
+      Ninja negre Run_22: -374799452
+      Ninja negre Run_23: -2115312301
+      Ninja negre Run_24: -2084385194
+      Ninja negre Run_25: 1227611098
+      Ninja negre Run_26: 1736640708
+      Ninja negre Run_27: -37175958
+      Ninja negre Run_28: 2031406924
+      Ninja negre Run_29: 677702858
+      Ninja negre Run_3: -387183005
+      Ninja negre Run_30: 1545653295
+      Ninja negre Run_31: 717331234
+      Ninja negre Run_32: -983791734
+      Ninja negre Run_33: -1805404779
+      Ninja negre Run_34: -1333088940
+      Ninja negre Run_35: 967700797
+      Ninja negre Run_36: 1120667541
+      Ninja negre Run_4: 288019917
+      Ninja negre Run_5: 824118029
+      Ninja negre Run_6: -963140328
+      Ninja negre Run_7: 942142460
+      Ninja negre Run_8: -882492708
+      Ninja negre Run_9: 2128397208
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

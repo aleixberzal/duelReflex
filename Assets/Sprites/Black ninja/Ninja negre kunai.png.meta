@@ -43,7 +43,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -134,7 +134,154 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Ninja negre kunai_0
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 10
+        width: 215
+        height: 308
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a8c635bdcbe3d1b4fa17d07c52222873
+      internalID: -1039636784
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ninja negre kunai_1
+      rect:
+        serializedVersion: 2
+        x: 328
+        y: 5
+        width: 202
+        height: 313
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3bab449e2a49a2d4ab605d0c786acfdf
+      internalID: 612269064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ninja negre kunai_2
+      rect:
+        serializedVersion: 2
+        x: 568
+        y: 4
+        width: 189
+        height: 314
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5fc01317adba6f4499c725ebfaa3aaea
+      internalID: -2028312815
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ninja negre kunai_3
+      rect:
+        serializedVersion: 2
+        x: 806
+        y: 4
+        width: 158
+        height: 314
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 373c6bac9b5c1c443b4981a995774a9e
+      internalID: -1221295176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ninja negre kunai_4
+      rect:
+        serializedVersion: 2
+        x: 1050
+        y: 5
+        width: 165
+        height: 313
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: affa3d787ec88f942a76094a1229c194
+      internalID: 234479222
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ninja negre kunai_5
+      rect:
+        serializedVersion: 2
+        x: 1268
+        y: 6
+        width: 192
+        height: 312
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78faa85a09b92be4aa00cda4a96c697c
+      internalID: -1067003077
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ninja negre kunai_6
+      rect:
+        serializedVersion: 2
+        x: 1500
+        y: 10
+        width: 223
+        height: 308
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 783a87d8863638044aee9593476d6764
+      internalID: 1588667363
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -145,7 +292,18 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Ninja negre kunai_0: -1039636784
+      Ninja negre kunai_1: 612269064
+      Ninja negre kunai_10: -1628656473
+      Ninja negre kunai_2: -2028312815
+      Ninja negre kunai_3: -1221295176
+      Ninja negre kunai_4: 234479222
+      Ninja negre kunai_5: -1067003077
+      Ninja negre kunai_6: 1588667363
+      Ninja negre kunai_7: 2039429159
+      Ninja negre kunai_8: -1585101393
+      Ninja negre kunai_9: -725159454
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

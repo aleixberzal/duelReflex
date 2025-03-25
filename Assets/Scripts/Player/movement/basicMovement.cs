@@ -8,7 +8,7 @@ public class basicMovement : MonoBehaviour
     private Rigidbody2D rb2D;
     public GameObject render;
     public string teclas = "Horizontal";
-
+    private Animator Animator;
     [Header("Movimiento")]
     private float horizontalMovement = 0f;
 
@@ -22,6 +22,8 @@ public class basicMovement : MonoBehaviour
     private void Start()
     {
         rb2D = GetComponent<Rigidbody2D>();
+        Animator = GetComponent<Animator>();
+
     }
 
     private void Update()
@@ -52,6 +54,10 @@ public class basicMovement : MonoBehaviour
 
     private void ApplyForce(float direction)
     {
+        if(Animator != null)
+        {
+            Animator.SetTrigger("RunTrigger");
+        }
         float actualSpeed = rb2D.velocity.x;
         float targetSpeed = direction * movementSpeed;
         float speedDiff = targetSpeed - actualSpeed;

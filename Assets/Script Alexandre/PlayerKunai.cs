@@ -8,10 +8,14 @@ public class PlayerKunai : MonoBehaviour
     public float velocidadKunai = 10f;
     public float cooldown = 1f;
     public KeyCode teclaDisparo = KeyCode.L;
-
+    private Animator Animator;
     private float tiempoUltimoDisparo = -Mathf.Infinity;
     private bool mirandoDerecha = true;
 
+    private void Start()
+    {
+        Animator = GetComponent<Animator>();
+    }
     private void Update()
     {
         // Detectar dirección mirando (según escala X)
@@ -26,6 +30,10 @@ public class PlayerKunai : MonoBehaviour
 
     void LanzarKunai()
     {
+        if(Animator != null)
+        {
+            Animator.SetTrigger("Kunai");
+        }
         GameObject kunai = Instantiate(kunaiPrefab, puntoDisparo.position, Quaternion.identity);
 
         Rigidbody2D rb = kunai.GetComponent<Rigidbody2D>();
