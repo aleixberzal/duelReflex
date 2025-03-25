@@ -96,7 +96,7 @@ GameObject:
   - component: {fileID: 9055936632390107845}
   m_Layer: 0
   m_Name: Pis sense teulada 2
-  m_TagString: Untagged
+  m_TagString: ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -186,7 +186,7 @@ GameObject:
   - component: {fileID: 4046225175439076791}
   m_Layer: 0
   m_Name: GameObject (2)
-  m_TagString: Untagged
+  m_TagString: ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -305,7 +305,7 @@ PlatformEffector2D:
   m_ColliderMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_RotationalOffset: 0
+  m_RotationalOffset: -180
   m_UseOneWay: 1
   m_UseOneWayGrouping: 0
   m_SurfaceArc: 180
@@ -467,6 +467,10 @@ PrefabInstance:
     - target: {fileID: 4648247347135940585, guid: 2f7f3df47ad25a144b8e9b3574cf5170, type: 3}
       propertyPath: m_Name
       value: Tejado
+      objectReference: {fileID: 0}
+    - target: {fileID: 4648247347135940585, guid: 2f7f3df47ad25a144b8e9b3574cf5170, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

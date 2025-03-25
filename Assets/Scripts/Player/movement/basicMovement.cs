@@ -64,8 +64,12 @@ public class basicMovement : MonoBehaviour
     {
         float horizontalSpeed = rb2D.velocity.x;
 
-        rb2D.velocity = new Vector2(0f, rb2D.velocity.y);
+        if (Mathf.Abs(horizontalSpeed) < 0.1f)
+        {
+            rb2D.velocity = new Vector2(0f, rb2D.velocity.y);
+        }
     }
+
 
     private void Turn()
     {
