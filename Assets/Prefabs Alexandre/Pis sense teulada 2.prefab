@@ -116,6 +116,7 @@ Transform:
   - {fileID: 8940739994014290695}
   - {fileID: 384560917293320687}
   - {fileID: 1695217592830975437}
+  - {fileID: 8226632438492392062}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -171,7 +172,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1 &7269118312962173261
+--- !u!1 &5648001984126871921
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -179,38 +180,37 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 384560917293320687}
-  - component: {fileID: 652406634971480013}
-  - component: {fileID: 727132149124948298}
+  - component: {fileID: 8226632438492392062}
+  - component: {fileID: 105411751584022739}
   m_Layer: 0
-  m_Name: Edificio1Planta (1)
+  m_Name: GameObject (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &384560917293320687
+--- !u!4 &8226632438492392062
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7269118312962173261}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.0061, y: 0.0829, z: -0.0017}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_GameObject: {fileID: 5648001984126871921}
+  m_LocalRotation: {x: -0, y: -0, z: -0.99998736, w: 0.005039385}
+  m_LocalPosition: {x: -0.0108, y: 0.1095, z: -0.004302047}
+  m_LocalScale: {x: 0.26897603, y: 0.016034, z: 0.2}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6338852746355868605}
   m_RootOrder: -1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &652406634971480013
-BoxCollider2D:
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -179.423}
+--- !u!60 &105411751584022739
+PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7269118312962173261}
+  m_GameObject: {fileID: 5648001984126871921}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
@@ -236,19 +236,66 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.013518602, y: 0.027052306}
+  m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.64, y: 0.36}
-    newSize: {x: 0.16, y: 0.16}
-    adaptiveTilingThreshold: 0.5
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.40968823, y: 0.03670697}
-  m_EdgeRadius: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.5887093, y: 0.005010113}
+      - {x: 0.6488543, y: 0.30215722}
+      - {x: 0.73697793, y: 0.22671865}
+      - {x: 0.6386203, y: 0.7369641}
+      - {x: 0, y: 1}
+      - {x: -0.08057543, y: 0.9414584}
+      - {x: -0.5091907, y: 1.067117}
+      - {x: -0.5738422, y: 0.93526095}
+      - {x: -0.6872568, y: 0.67753947}
+      - {x: -0.7216333, y: 0.47823414}
+      - {x: -0.6931966, y: 0.5315736}
+      - {x: -0.6154556, y: 0.3826913}
+      - {x: -0.4631311, y: -0.7019792}
+      - {x: -0.45673338, y: -0.7322484}
+      - {x: 0.4895137, y: -0.71541786}
+  m_UseDelaunayMesh: 0
+--- !u!1 &7269118312962173261
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 384560917293320687}
+  - component: {fileID: 727132149124948298}
+  m_Layer: 0
+  m_Name: Edificio1Planta (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &384560917293320687
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7269118312962173261}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.0061, y: 0.0829, z: -0.0017}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6338852746355868605}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &727132149124948298
 SpriteRenderer:
   m_ObjectHideFlags: 0
