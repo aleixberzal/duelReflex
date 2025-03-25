@@ -1,62 +1,76 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class JumpController : MonoBehaviour
 {
     private Rigidbody2D rb2D;
+    private basicMovement movement;
 
     [Header("Fuerza del Salto")]
-    [SerializeField] private float fuerzaDeSalto = 8.5f;
-    public bool isJumping;
-    public bool grounded;
-    private basicMovement movement;
+    public float fuerzaDeSalto = 8.5f;
     public float jumpReduction = 3f;
-    private float originalSpeed;
     public string jumpTecla = "space";
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    [Header("Detección de suelo")]
+    public Transform puntoSuelo;
+    public float radioSuelo = 0.1f;
+    public LayerMask capaSuelo;
+
+    public bool grounded;
+    public bool isJumping;
+    private float originalSpeed;
+
+    void Start()
     {
-        if (collision.gameObject.CompareTag("ground")) 
+        movement = GetComponent<basicMovement>();
+        rb2D = GetComponent<Rigidbody2D>();
+        originalSpeed = movement.movementSpeed;
+    }
+
+    void Update()
+    {
+        // Detecció de terra via Overlap + tag
+        grounded = false;
+        Collider2D[] colisiones = Physics2D.OverlapCircleAll(puntoSuelo.position, radioSuelo);
+        foreach (Collider2D col in colisiones)
         {
-            grounded = true;
-            isJumping = false; 
+            if (col.CompareTag("ground"))
+            {
+                grounded = true;
+                break;
+            }
+        }
+
+        // Salt
+        if (!isJumping && grounded)
+        {
+            Saltar();
+        }
+
+        // Detectar si ha aterrat realment
+        if (isJumping && grounded && Mathf.Abs(rb2D.velocity.y) < 0.1f)
+        {
+            isJumping = false;
         }
     }
 
-    private void OnCollisionExit2D(Collision2D collision)
+
+    void Saltar()
     {
-        if (collision.gameObject.CompareTag("ground")) 
+        if (Input.GetKeyDown(jumpTecla))
         {
+            rb2D.velocity = new Vector2(rb2D.velocity.x, fuerzaDeSalto);
+            isJumping = true;
             grounded = false;
         }
     }
 
-    private void Start()
-    {
-        movement = GetComponent<basicMovement>(); 
-        rb2D = GetComponent<Rigidbody2D>();
-        originalSpeed = movement.movementSpeed; 
-    }
 
-    private void Update()
+    void OnDrawGizmosSelected()
     {
-        if (!isJumping && grounded) 
+        if (puntoSuelo != null)
         {
-            Saltar();
-        }
-    }
-
-    private void Saltar()
-    {
-        if (Input.GetKeyDown(jumpTecla)) 
-        {
-            if (grounded)
-            {
-                rb2D.velocity = new Vector2(rb2D.velocity.x, fuerzaDeSalto); 
-                isJumping = true; 
-                grounded = false;
-            }
+            Gizmos.color = Color.red;
+            Gizmos.DrawWireSphere(puntoSuelo.position, radioSuelo);
         }
     }
 }

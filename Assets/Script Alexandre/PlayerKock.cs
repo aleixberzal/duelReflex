@@ -12,27 +12,65 @@ public class PlayerKock : MonoBehaviour
     public Transform puntoGolpe;
     public LayerMask capaEnemigo;
 
+    [Header("Tag del kunai enemigo")]
+    public string tagKunai = "Kunai";
+    public string nuevoTagObjetivo = "Player1"; // Cambiar según quién lanza la patada
+
+    private Animator Animator;
+    private void Start()
+    {
+        Animator = GetComponent<Animator>();
+
+    }
     void Update()
     {
         if (Input.GetKeyDown(teclaPatada))
         {
+            if (Animator != null)
+            {
+                Animator.SetTrigger("Kick");
+                
+            }
             LanzarPatada();
         }
     }
 
     void LanzarPatada()
     {
-        
-        Collider2D[] enemigos = Physics2D.OverlapCircleAll(puntoGolpe.position, radioGolpe, capaEnemigo);
+        Collider2D[] objetos = Physics2D.OverlapCircleAll(puntoGolpe.position, radioGolpe);
 
-        foreach (Collider2D enemigo in enemigos)
+        foreach (Collider2D obj in objetos)
         {
-            Rigidbody2D rb = enemigo.GetComponent<Rigidbody2D>();
-            if (rb != null)
+            // 1. Empujar enemigos (según capa)
+            if (((1 << obj.gameObject.layer) & capaEnemigo) != 0)
             {
-                // Calcular dirección desde el jugador hacia el enemigo
-                Vector2 direccion = (enemigo.transform.position - transform.position).normalized;
-                rb.AddForce(direccion * fuerzaEmpuje, ForceMode2D.Impulse);
+                Rigidbody2D rb = obj.GetComponent<Rigidbody2D>();
+                if (rb != null)
+                {
+                    Vector2 direccion = (obj.transform.position - transform.position).normalized;
+                    rb.AddForce(direccion * fuerzaEmpuje, ForceMode2D.Impulse);
+                }
+            }
+
+            // 2. Rebotar kunai
+            if (obj.CompareTag(tagKunai))
+            {
+                Rigidbody2D rbKunai = obj.GetComponent<Rigidbody2D>();
+                Kunai kunaiScript = obj.GetComponent<Kunai>();
+
+                if (rbKunai != null && kunaiScript != null)
+                {
+                    // Invertir la dirección del kunai
+                    rbKunai.velocity = new Vector2(-rbKunai.velocity.x, rbKunai.velocity.y);
+
+                    // Voltear el sprite visual
+                    Vector3 escala = obj.transform.localScale;
+                    escala.x *= -1;
+                    obj.transform.localScale = escala;
+
+                    // Cambiar objetivo
+                    kunaiScript.tagObjetivo = nuevoTagObjetivo;
+                }
             }
         }
     }

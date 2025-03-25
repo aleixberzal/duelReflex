@@ -70,11 +70,22 @@ public class basicMovement : MonoBehaviour
     {
         float horizontalSpeed = rb2D.velocity.x;
 
-        if (Mathf.Abs(horizontalSpeed) < 0.1f)
+        // Si el jugador no está tocando suelo, no frenamos (puedes quitar esta condición si quieres frenar también en el aire)
+        if (!touchingFloor) return;
+
+        // Si se está moviendo, aplicamos freno suave
+        if (Mathf.Abs(horizontalSpeed) > 0.1f)
         {
+            float freno = -Mathf.Sign(horizontalSpeed) * forceController * 0.5f;
+            rb2D.AddForce(new Vector2(freno, 0f), ForceMode2D.Force);
+        }
+        else
+        {
+            // Si la velocidad es muy baja, la cancelamos directamente
             rb2D.velocity = new Vector2(0f, rb2D.velocity.y);
         }
     }
+
 
     private void Turn()
     {

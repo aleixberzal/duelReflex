@@ -2,23 +2,36 @@ using UnityEngine;
 
 public class PlataformaManager : MonoBehaviour
 {
-    [Header("Prefabs de casas completas (1 a 4 plantas)")]
-    public GameObject[] casasPrefabs; // Índice 0 = 1 planta, índice 3 = 4 plantas
+    [Header("Prefab de plataforma de bambú")]
+    public GameObject plataformaBambuPrefab;
 
     [Header("Spawning")]
-    public float retardoEntreTorres = 2f;
-    public float distanciaX = 6f;
-    public float offsetY = -2f;
-  
-    [Header("Escala de casas")]
-    public Vector3 escalaCasa = Vector3.one;
+    public float retardoEntrePlataformas = 1.5f;
+    public float alturaInicial = -4f;
+    public int cantidadNiveles = 5;
+    public float separacionEntreNiveles = 2f;
 
-    [Header("Movimiento")]
-    public float velocidadMovimiento = 2f;
-    public float alturaPlanta = 1.5f;
+    [Header("Escala aleatoria")]
+    public float escalaMin = 0.8f;
+    public float escalaMax = 2f;
+
+    [Header("Velocidad aleatoria")]
+    public float velocidadMin = 1f;
+    public float velocidadMax = 3f;
 
     private float temporizador = 0f;
-    private int indiceTorre = 0;
+    private float[] nivelesY;
+    private int ultimoNivelUsado = -1;
+
+    void Start()
+    {
+        // Generar alturas fijas
+        nivelesY = new float[cantidadNiveles];
+        for (int i = 0; i < cantidadNiveles; i++)
+        {
+            nivelesY[i] = alturaInicial + i * separacionEntreNiveles;
+        }
+    }
 
     void Update()
     {
@@ -26,48 +39,63 @@ public class PlataformaManager : MonoBehaviour
 
         if (temporizador <= 0f)
         {
-            GenerarParDeTorres();
-            temporizador = retardoEntreTorres;
+            GenerarParDePlataformas();
+            temporizador = retardoEntrePlataformas;
         }
     }
 
-    void GenerarParDeTorres()
+    void GenerarParDePlataformas()
     {
-        // Elegir prefab aleatorio
-        int index = Random.Range(0, casasPrefabs.Length);
-        GameObject prefabSeleccionado = casasPrefabs[index];
+        int indiceNivel = ElegirNivelAleatorioSinRepetir();
+        float posY = nivelesY[indiceNivel];
+        float escalaX = Random.Range(escalaMin, escalaMax);
+        float velocidad = Random.Range(velocidadMin, velocidadMax);
 
-        // Calcular número de plantas y su altura en Y
-        int numPlantas = index + 1;
-        float alturaTotal = numPlantas * alturaPlanta;
-        float yBase = offsetY + (alturaTotal / 2f);
+        Vector3 posicion = new Vector3(0f, posY, 0f);
 
-        float xOffset = indiceTorre * distanciaX + 2f;
+        // Derecha
+        Instanciar(plataformaBambuPrefab, posicion, 1f, escalaX, velocidad);
 
-        // Torre derecha
-        Instanciar(prefabSeleccionado, new Vector3(0f, yBase, 0f), 1f);
+        // Izquierda
+        Instanciar(plataformaBambuPrefab, posicion, -1f, escalaX, velocidad);
 
-        // Torre izquierda
-        Instanciar(prefabSeleccionado, new Vector3(0f, yBase, 0f), -1f);
-
-        indiceTorre++;
+        // Guardar nivel usado
+        ultimoNivelUsado = indiceNivel;
     }
 
-    void Instanciar(GameObject prefab, Vector3 posicion, float direccion)
+    int ElegirNivelAleatorioSinRepetir()
     {
-        GameObject torre = Instantiate(prefab, posicion, Quaternion.identity);
+        if (cantidadNiveles <= 1)
+            return 0;
 
-        // Aplicar escala desde el spawner
-        torre.transform.localScale = escalaCasa;
+        int nuevoIndice;
+        do
+        {
+            nuevoIndice = Random.Range(0, nivelesY.Length);
+        }
+        while (nuevoIndice == ultimoNivelUsado);
 
-        MovimientoPlataforma mover = torre.GetComponent<MovimientoPlataforma>();
+        return nuevoIndice;
+    }
+
+    void Instanciar(GameObject prefab, Vector3 posicion, float direccion, float escalaX, float velocidad)
+    {
+        GameObject plataforma = Instantiate(prefab, posicion, Quaternion.identity);
+
+        Vector3 escalaOriginal = plataforma.transform.localScale;
+        plataforma.transform.localScale = new Vector3(
+            escalaOriginal.x * escalaX,
+            escalaOriginal.y,
+            escalaOriginal.z
+        );
+
+        MovimientoPlataforma mover = plataforma.GetComponent<MovimientoPlataforma>();
         if (mover == null)
         {
-            mover = torre.AddComponent<MovimientoPlataforma>();
+            mover = plataforma.AddComponent<MovimientoPlataforma>();
         }
 
         mover.direccionX = direccion;
-        mover.velocidad = velocidadMovimiento;
+        mover.velocidad = velocidad;
     }
-
 }

@@ -43,7 +43,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -134,7 +134,133 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Ninja negre patada_0
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 31
+        width: 151
+        height: 308
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2ec5274fd384694da63c825e4325838
+      internalID: 701387481
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ninja negre patada_1
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 31
+        width: 222
+        height: 308
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64f437b953d2f0e4b960f7477e6f0173
+      internalID: 993264371
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ninja negre patada_2
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 31
+        width: 221
+        height: 308
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 363bcd56a989f514ca7dfc9c8f20d924
+      internalID: -893843415
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ninja negre patada_3
+      rect:
+        serializedVersion: 2
+        x: 716
+        y: 32
+        width: 222
+        height: 307
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5271da50a921ae4383ce90efd43bc3b
+      internalID: -1811476586
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ninja negre patada_4
+      rect:
+        serializedVersion: 2
+        x: 999
+        y: 31
+        width: 192
+        height: 308
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2f3e3702ab125e43bc7bf25adfe24fe
+      internalID: -1735323699
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ninja negre patada_5
+      rect:
+        serializedVersion: 2
+        x: 1259
+        y: 31
+        width: 151
+        height: 308
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e892183bc5e082469dbfa29a125466c
+      internalID: 1513678196
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -145,7 +271,16 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Ninja negre patada_0: 701387481
+      Ninja negre patada_1: 993264371
+      Ninja negre patada_2: -893843415
+      Ninja negre patada_3: -1811476586
+      Ninja negre patada_4: -1735323699
+      Ninja negre patada_5: 1513678196
+      Ninja negre patada_6: -624700130
+      Ninja negre patada_7: 675871688
+      Ninja negre patada_8: -1038656477
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

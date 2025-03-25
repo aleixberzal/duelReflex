@@ -9,11 +9,16 @@ public class PlayerKunai : MonoBehaviour
     public float velocidadKunai = 10f;
     public float cooldown = 1f;
     public KeyCode teclaDisparo = KeyCode.L;
+
     private Animator Animator;
     private float tiempoUltimoDisparo = -Mathf.Infinity;
     private bool mirandoDerecha = true;
+
     [Header("Retardo de disparo")]
     public float retardoDisparo = 0.2f;
+
+    [Header("Tag del objetivo")]
+    public string tagObjetivo = "Player2"; // Este valor se puede cambiar desde el Inspector
 
     private float direccionActual = 1f;
 
@@ -21,6 +26,7 @@ public class PlayerKunai : MonoBehaviour
     {
         Animator = GetComponent<Animator>();
     }
+
     private void Update()
     {
         // Detectar dirección mirando (según escala X)
@@ -44,6 +50,7 @@ public class PlayerKunai : MonoBehaviour
 
         Invoke(nameof(DispararKunai), retardoDisparo);
     }
+
     void DispararKunai()
     {
         GameObject kunai = Instantiate(kunaiPrefab, puntoDisparo.position, Quaternion.identity);
@@ -57,6 +64,12 @@ public class PlayerKunai : MonoBehaviour
             escala.x *= direccionActual > 0 ? 1 : -1;
             kunai.transform.localScale = escala;
         }
-    }
 
+        // Asignar el tag del objetivo al kunai
+        Kunai kunaiScript = kunai.GetComponent<Kunai>();
+        if (kunaiScript != null)
+        {
+            kunaiScript.tagObjetivo = tagObjetivo;
+        }
+    }
 }

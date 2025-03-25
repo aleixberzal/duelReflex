@@ -24,8 +24,39 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 431290612916324191}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.31000042, y: -0.55999994, z: -0.110325254}
-  m_LocalScale: {x: 2, y: 2, z: 1}
+  m_LocalPosition: {x: 2.15, y: 0.08, z: -0.11}
+  m_LocalScale: {x: 1.925, y: 2, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2174495444785520453}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &7233804259327668447
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5564690159578347060}
+  m_Layer: 6
+  m_Name: NinjaPurpuraFirePoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5564690159578347060
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7233804259327668447}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 2.313, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2174495444785520453}
@@ -42,10 +73,13 @@ GameObject:
   - component: {fileID: 2174495444785520453}
   - component: {fileID: 8498881210195081203}
   - component: {fileID: 8707093605136932337}
+  - component: {fileID: 7857681779976536202}
   - component: {fileID: 7335280968613308714}
   - component: {fileID: 1988823229884732626}
   - component: {fileID: 1276533622567509617}
-  - component: {fileID: 3226091828308567021}
+  - component: {fileID: 4606760038029199898}
+  - component: {fileID: 6740802779214668930}
+  - component: {fileID: 1752693436058729134}
   m_Layer: 6
   m_Name: blackNinja
   m_TagString: Player1
@@ -61,13 +95,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8290403201253268328}
   m_LocalRotation: {x: -0.008727774, y: 0, z: 0, w: 0.9999619}
-  m_LocalPosition: {x: -3.5388823, y: -3.6050763, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
+  m_LocalPosition: {x: 20.66, y: 8.44, z: 0.79}
+  m_LocalScale: {x: 1, y: 0.9756098, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6624445873688545346}
+  - {fileID: 5564690159578347060}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: -1, y: 0, z: 0}
 --- !u!212 &8498881210195081203
 SpriteRenderer:
@@ -110,8 +145,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -9095717837082945937, guid: 207ee8102dd4143d288186ef0be518ee, type: 3}
-  m_Color: {r: 0.6509434, g: 0.107467055, b: 0.107467055, a: 1}
+  m_Sprite: {fileID: -28115188, guid: fbbcd9f23a2da7749b7be4945e680bad, type: 3}
+  m_Color: {r: 1, g: 0.33490568, b: 0.9755509, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -153,19 +188,36 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.03388858, y: -0.0347414}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 2}
+    oldSize: {x: 1.51, y: 3.06}
     newSize: {x: 1, y: 2}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 2}
+  m_Size: {x: 1.4744401, y: 3.0422335}
   m_EdgeRadius: 0
+--- !u!114 &7857681779976536202
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8290403201253268328}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e67bb5dc559bdcf41874326cced37a1b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  plataformaPrefab: {fileID: 6387586118208712703, guid: 1ac574cc43e8b6140bf97b03715249ee, type: 3}
+  duracionPlataforma: 1
+  offset: {x: 0, y: -0.5}
+  teclaInvocacion: 274
+  cooldown: 15
 --- !u!50 &7335280968613308714
 Rigidbody2D:
   serializedVersion: 4
@@ -181,7 +233,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 2
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -206,7 +258,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   render: {fileID: 8290403201253268328}
-  movementSpeed: 5
+  teclas: HorizontalB
+  movementSpeed: 10
   forceController: 30
   airForce: 2
   touchingFloor: 1
@@ -222,11 +275,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b6c6ed3282322d488506c1aa1c1707f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fuerzaDeSalto: 6
+  fuerzaDeSalto: 18
   isJumping: 0
   grounded: 1
   jumpReduction: 4
---- !u!114 &3226091828308567021
+  jumpTecla: up
+--- !u!114 &4606760038029199898
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -235,13 +289,56 @@ MonoBehaviour:
   m_GameObject: {fileID: 8290403201253268328}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b977b7aaa41e01d4a9e67fa98e657fea, type: 3}
+  m_Script: {fileID: 11500000, guid: 1052438c193b85e48b79fa004a2fbb9b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  kickRange: 1.5
-  kickForce: 15
-  kickOrigin: {fileID: 6624445873688545346}
-  kickCooldown: 0.5
-  opponentLayer:
+  fuerzaEmpuje: 20
+  radioGolpe: 1.5
+  direccionGolpe: {x: 1, y: 0}
+  teclaPatada: 257
+  puntoGolpe: {fileID: 6624445873688545346}
+  capaEnemigo:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 128
+  tagKunai: Kunai
+  nuevoTagObjetivo: Player2
+--- !u!114 &6740802779214668930
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8290403201253268328}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11ad15deaae9c9948b59f3ea996aab18, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  kunaiPrefab: {fileID: 189289066892707521, guid: 40db830a5e4efea41835ca009fb78027, type: 3}
+  puntoDisparo: {fileID: 5564690159578347060}
+  velocidadKunai: 10
+  cooldown: 1
+  teclaDisparo: 258
+  retardoDisparo: 0.2
+  tagObjetivo: Player2
+--- !u!95 &1752693436058729134
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8290403201253268328}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: acc789ddedcc66b4c9bc01b60ff2710f, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
