@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class PlayerKock : MonoBehaviour
@@ -17,9 +18,12 @@ public class PlayerKock : MonoBehaviour
     public string nuevoTagObjetivo = "Player1"; // Cambiar según quién lanza la patada
 
     private Animator Animator;
+    private AudioManager audioManager;
     private void Start()
     {
         Animator = GetComponent<Animator>();
+        audioManager = FindObjectOfType<AudioManager>();
+        
 
     }
     void Update()
@@ -32,6 +36,14 @@ public class PlayerKock : MonoBehaviour
                 
             }
             LanzarPatada();
+            if (audioManager != null && audioManager.SFXSource != null && audioManager.kick != null)
+            {
+                audioManager.SFXSource.clip = audioManager.kick;
+                audioManager.SFXSource.time = 0.2f;
+                audioManager.SFXSource.Play();
+
+                Debug.Log("Ha sonado la patada desde 0.3s");
+            }
         }
     }
 
@@ -50,6 +62,8 @@ public class PlayerKock : MonoBehaviour
                     Vector2 direccion = (obj.transform.position - transform.position).normalized;
                     rb.AddForce(direccion * fuerzaEmpuje, ForceMode2D.Impulse);
                 }
+               
+
             }
 
             // 2. Rebotar kunai
@@ -70,6 +84,16 @@ public class PlayerKock : MonoBehaviour
 
                     // Cambiar objetivo
                     kunaiScript.tagObjetivo = nuevoTagObjetivo;
+
+                    if (audioManager != null && audioManager.SFXSource != null && audioManager.parry != null)
+                    {
+                        audioManager.SFXSource.clip = audioManager.parry;
+                        audioManager.SFXSource.time = 0.2f;
+                        audioManager.SFXSource.Play();
+
+                        Debug.Log("Ha sonado la patada desde 0.3s");
+                    }
+
                 }
             }
         }

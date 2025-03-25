@@ -4,6 +4,7 @@ public class JumpController : MonoBehaviour
 {
     private Rigidbody2D rb2D;
     private basicMovement movement;
+    private AudioManager audioManager;
 
     [Header("Fuerza del Salto")]
     public float fuerzaDeSalto = 8.5f;
@@ -19,10 +20,13 @@ public class JumpController : MonoBehaviour
     public bool isJumping;
     private float originalSpeed;
 
+
+
     void Start()
     {
         movement = GetComponent<basicMovement>();
         rb2D = GetComponent<Rigidbody2D>();
+        audioManager = FindObjectOfType<AudioManager>();
         originalSpeed = movement.movementSpeed;
     }
 
@@ -61,6 +65,10 @@ public class JumpController : MonoBehaviour
             rb2D.velocity = new Vector2(rb2D.velocity.x, fuerzaDeSalto);
             isJumping = true;
             grounded = false;
+        }
+        if (audioManager != null && audioManager.SFXSource != null && audioManager.jump != null)
+        {
+            audioManager.SFXSource.PlayOneShot(audioManager.jump);
         }
     }
 

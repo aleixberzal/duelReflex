@@ -6,6 +6,7 @@ public class PlayerKunai : MonoBehaviour
     [Header("Disparo")]
     public GameObject kunaiPrefab;
     public Transform puntoDisparo;
+    private AudioManager audioManager;
     public float velocidadKunai = 10f;
     public float cooldown = 1f;
     public KeyCode teclaDisparo = KeyCode.L;
@@ -25,6 +26,7 @@ public class PlayerKunai : MonoBehaviour
     private void Start()
     {
         Animator = GetComponent<Animator>();
+        audioManager = FindObjectOfType<AudioManager>();
     }
 
     private void Update()
@@ -70,6 +72,15 @@ public class PlayerKunai : MonoBehaviour
         if (kunaiScript != null)
         {
             kunaiScript.tagObjetivo = tagObjetivo;
+        }
+
+        if (audioManager != null && audioManager.SFXSource != null && audioManager.kunaiThrow != null)
+        {
+            audioManager.SFXSource.clip = audioManager.kunaiThrow;
+            audioManager.SFXSource.time = 0.1f;
+            audioManager.SFXSource.Play();
+
+            Debug.Log("Ha sonado la patada desde 0.3s");
         }
     }
 }
