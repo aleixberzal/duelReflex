@@ -67,15 +67,15 @@ public class basicMovement : MonoBehaviour
         Vector2 force = new Vector2(speedDiff * forceController, 0);
         rb2D.AddForce(force, ForceMode2D.Force);
 
-        if (audioManager != null && audioManager.SFXSource != null && audioManager.run != null)
-        {
-            audioManager.SFXSource.PlayOneShot(audioManager.run);
-            audioManager.SFXSource.time = 0.2f;
-        }
+      
     }
 
     private void BreakMovement()
     {
+        if (Animator != null)
+        {
+            Animator.SetTrigger("Iddle");
+        }
         float horizontalSpeed = rb2D.velocity.x;
 
         // Si el jugador no está tocando suelo, no frenamos (puedes quitar esta condición si quieres frenar también en el aire)

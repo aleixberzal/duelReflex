@@ -17,6 +17,9 @@ public class PlayerKock : MonoBehaviour
     [Header("Tag del kunai enemigo")]
     public string tagKunai = "Kunai";
     public string nuevoTagObjetivo = "Player1"; // Cambiar según quién lanza la patada
+    [Header("Cooldown")]
+    public float cooldown = 1f;
+    private float tiempoUltimaPatada = -Mathf.Infinity;
 
     private Animator Animator;
     private AudioManager audioManager;
@@ -29,7 +32,7 @@ public class PlayerKock : MonoBehaviour
     }
     void Update()
     {
-        if (Input.GetKeyDown(teclaPatada))
+        if (Input.GetKeyDown(teclaPatada) && Time.time >= tiempoUltimaPatada + cooldown)
         {
             if (Animator != null)
             {
@@ -43,10 +46,10 @@ public class PlayerKock : MonoBehaviour
 
                     Debug.Log("Ha sonado la patada desde 0.3s");
                 }
-
             }
+
             LanzarPatada();
-           
+            tiempoUltimaPatada = Time.time;
         }
     }
 
@@ -64,8 +67,10 @@ public class PlayerKock : MonoBehaviour
                 {
                     Vector2 direccion = (obj.transform.position - transform.position).normalized;
                     rb.AddForce(direccion * fuerzaEmpuje, ForceMode2D.Impulse);
+                   
                 }
                
+
 
             }
 

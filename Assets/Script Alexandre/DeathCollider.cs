@@ -21,6 +21,7 @@ public class DeathCollider : MonoBehaviour
                 audioManager.SFXSource.clip = audioManager.death;
                 audioManager.SFXSource.time = 0.2f;
                 audioManager.SFXSource.Play();
+                audioManager.SFXSource.volume = 0.5f;
 
                 Debug.Log("Ha sonado la patada desde 0.3s");
             }
