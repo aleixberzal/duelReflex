@@ -43,7 +43,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -134,7 +134,91 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Ninja negre salt_0
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 31
+        width: 151
+        height: 308
+      alignment: 9
+      pivot: {x: 0.6700189, y: 0.50609905}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4eac42bef7716749adc4db619cb1ff2
+      internalID: 986319836
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ninja negre salt_1
+      rect:
+        serializedVersion: 2
+        x: 326
+        y: 11
+        width: 157
+        height: 328
+      alignment: 9
+      pivot: {x: 0.5877429, y: 0.5324538}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9ada597475d3aa4b8a537acadc990ab
+      internalID: 374898144
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ninja negre salt_2
+      rect:
+        serializedVersion: 2
+        x: 588
+        y: 15
+        width: 198
+        height: 324
+      alignment: 9
+      pivot: {x: 0.5664115, y: 0.5289892}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e88841e7976095d4d8aa6c955ccdda52
+      internalID: -2000214157
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ninja negre salt_3
+      rect:
+        serializedVersion: 2
+        x: 839
+        y: 23
+        width: 196
+        height: 316
+      alignment: 9
+      pivot: {x: 0.61501014, y: 0.5158523}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e31333e97b731784c88ee235fd7f40f4
+      internalID: -944641982
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -145,7 +229,13 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Ninja negre salt_0: 986319836
+      Ninja negre salt_1: 374898144
+      Ninja negre salt_2: -2000214157
+      Ninja negre salt_3: -944641982
+      Ninja negre salt_4: 2045363757
+      Ninja negre salt_5: -93834794
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
