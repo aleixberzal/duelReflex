@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class Kunai : MonoBehaviour
 {
+    private AudioManager audioManager;
     [Header("Ajustes")]
     public string tagObjetivo = "Player2"; // Por defecto
 
@@ -9,6 +10,7 @@ public class Kunai : MonoBehaviour
 
     private void Start()
     {
+        audioManager = FindObjectOfType<AudioManager>();
         Destroy(gameObject, tiempoDesaparicion);
     }
 
@@ -16,6 +18,15 @@ public class Kunai : MonoBehaviour
     {
         if (other.CompareTag(tagObjetivo))
         {
+
+            if (audioManager != null && audioManager.SFXSource != null && audioManager.death != null)
+            {
+                audioManager.SFXSource.clip = audioManager.death;
+                audioManager.SFXSource.time = 0.1f;
+                audioManager.SFXSource.Play();
+
+                Debug.Log("Ha sonado la patada desde 0.3s");
+            }
             Destroy(other.gameObject);
             Destroy(gameObject);
         }

@@ -9,6 +9,7 @@ public class basicMovement : MonoBehaviour
     public GameObject render;
     public string teclas = "Horizontal";
     private Animator Animator;
+    private AudioManager audioManager;
     [Header("Movimiento")]
     private float horizontalMovement = 0f;
 
@@ -23,6 +24,7 @@ public class basicMovement : MonoBehaviour
     {
         rb2D = GetComponent<Rigidbody2D>();
         Animator = GetComponent<Animator>();
+        audioManager = FindObjectOfType<AudioManager>();
 
     }
 
@@ -64,6 +66,12 @@ public class basicMovement : MonoBehaviour
 
         Vector2 force = new Vector2(speedDiff * forceController, 0);
         rb2D.AddForce(force, ForceMode2D.Force);
+
+        if (audioManager != null && audioManager.SFXSource != null && audioManager.run != null)
+        {
+            audioManager.SFXSource.PlayOneShot(audioManager.run);
+            audioManager.SFXSource.time = 0.2f;
+        }
     }
 
     private void BreakMovement()

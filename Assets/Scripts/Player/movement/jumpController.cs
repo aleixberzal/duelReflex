@@ -19,6 +19,7 @@ public class JumpController : MonoBehaviour
     public bool grounded;
     public bool isJumping;
     private float originalSpeed;
+    private Animator Animator;
 
 
 
@@ -28,6 +29,7 @@ public class JumpController : MonoBehaviour
         rb2D = GetComponent<Rigidbody2D>();
         audioManager = FindObjectOfType<AudioManager>();
         originalSpeed = movement.movementSpeed;
+        Animator = GetComponent<Animator>();
     }
 
     void Update()
@@ -60,16 +62,29 @@ public class JumpController : MonoBehaviour
 
     void Saltar()
     {
-        if (Input.GetKeyDown(jumpTecla))
-        {
-            rb2D.velocity = new Vector2(rb2D.velocity.x, fuerzaDeSalto);
-            isJumping = true;
-            grounded = false;
-        }
+        
+        if (!Input.GetKeyDown(jumpTecla))
+            return;
+        
+
         if (audioManager != null && audioManager.SFXSource != null && audioManager.jump != null)
         {
             audioManager.SFXSource.PlayOneShot(audioManager.jump);
+            audioManager.SFXSource.time = 0.2f;
         }
+
+        if (Animator != null)
+        {
+            Animator.SetTrigger("Jump");
+        }
+
+        rb2D.velocity = new Vector2(rb2D.velocity.x, fuerzaDeSalto);
+        isJumping = true;
+        grounded = false;
+
+            
+     
+       
     }
 
 

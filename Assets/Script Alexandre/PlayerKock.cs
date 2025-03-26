@@ -8,6 +8,7 @@ public class PlayerKock : MonoBehaviour
     public float radioGolpe = 1f;
     public Vector2 direccionGolpe = Vector2.right;
     public KeyCode teclaPatada = KeyCode.K;
+    public float audioVolume;
 
     [Header("Detección")]
     public Transform puntoGolpe;
@@ -33,17 +34,19 @@ public class PlayerKock : MonoBehaviour
             if (Animator != null)
             {
                 Animator.SetTrigger("Kick");
-                
+
+                if (audioManager != null && audioManager.SFXSource != null && audioManager.kick != null)
+                {
+                    audioManager.SFXSource.clip = audioManager.kick;
+                    audioManager.SFXSource.time = 0.2f;
+                    audioManager.SFXSource.Play();
+
+                    Debug.Log("Ha sonado la patada desde 0.3s");
+                }
+
             }
             LanzarPatada();
-            if (audioManager != null && audioManager.SFXSource != null && audioManager.kick != null)
-            {
-                audioManager.SFXSource.clip = audioManager.kick;
-                audioManager.SFXSource.time = 0.2f;
-                audioManager.SFXSource.Play();
-
-                Debug.Log("Ha sonado la patada desde 0.3s");
-            }
+           
         }
     }
 
@@ -89,6 +92,7 @@ public class PlayerKock : MonoBehaviour
                     {
                         audioManager.SFXSource.clip = audioManager.parry;
                         audioManager.SFXSource.time = 0.2f;
+                        audioManager.SFXSource.volume = audioVolume;
                         audioManager.SFXSource.Play();
 
                         Debug.Log("Ha sonado la patada desde 0.3s");
