@@ -14,4 +14,5 @@ public class AudioManager : MonoBehaviour
     public AudioClip kunaiThrow;
     public AudioClip parry;
     public AudioClip jump;
+    public AudioClip run;
 }

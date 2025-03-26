@@ -63,20 +63,28 @@ public class JumpController : MonoBehaviour
     void Saltar()
     {
         
-        if (Input.GetKeyDown(jumpTecla))
-        {
-            if (Animator != null)
-            {
-                Animator.SetTrigger("Jump");
-            }
-            rb2D.velocity = new Vector2(rb2D.velocity.x, fuerzaDeSalto);
-            isJumping = true;
-            grounded = false;
-        }
+        if (!Input.GetKeyDown(jumpTecla))
+            return;
+        
+
         if (audioManager != null && audioManager.SFXSource != null && audioManager.jump != null)
         {
             audioManager.SFXSource.PlayOneShot(audioManager.jump);
+            audioManager.SFXSource.time = 0.2f;
         }
+
+        if (Animator != null)
+        {
+            Animator.SetTrigger("Jump");
+        }
+
+        rb2D.velocity = new Vector2(rb2D.velocity.x, fuerzaDeSalto);
+        isJumping = true;
+        grounded = false;
+
+            
+     
+       
     }
 
 
